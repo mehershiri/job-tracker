@@ -19,12 +19,6 @@ This project helps you **track job applications efficiently** and can be used as
 
 ---
 
-## Demo Screenshot
-
-*(Optional: Add a screenshot of your dashboard here)*
-
----
-
 ## Setup Instructions
 
 ### 1. Clone the repository
@@ -32,7 +26,7 @@ This project helps you **track job applications efficiently** and can be used as
 ```bash
 git clone https://github.com/mehershiri/job-tracker.git
 cd job-tracker
-
+---
 ### 2. Create a virtual environment
 python -m venv venv
 # Activate the environment
@@ -40,10 +34,10 @@ python -m venv venv
 venv\Scripts\activate
 # macOS / Linux
 source venv/bin/activate
-
+---
 ### 3. Install Dependencies
 pip install -r requirements.txt
-
+---
 ### 4. Set Up MYSQL Server
 This is essential to view and modify the database
 1. Install MySQL Server
@@ -58,15 +52,15 @@ CREATE TABLE applications (
     email_date DATETIME,
     email_uid VARCHAR(255) UNIQUE
 );
-
+---
 ### 5. Create a .env file
 Please fill in with your credentials
 EMAIL_USERNAME=your_email@gmail.com
 EMAIL_PASSWORD=your_app_password
 DB_PASSWORD=your_mysql_password
-
+---
 ### 6. Fetch Emails
 python fetch_emails.py
-
+---
 ### 7. Run the Dashboard
 python fetch_emails.py
