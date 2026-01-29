@@ -1,0 +1,6 @@
+imapclient==2.3.0
+pyzmail36==1.0.4
+mysql-connector-python==8.1.1
+python-dotenv==1.0.0
+streamlit==1.27.0
+pandas==2.1.1
