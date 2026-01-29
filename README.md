@@ -26,9 +26,8 @@ This project helps you **track job applications efficiently** and can be used as
 ```bash
 git clone https://github.com/mehershiri/job-tracker.git
 cd job-tracker
-
+```
 ---
-
 ### 2. Create a Virtual Environment (Recommended)
 
 A virtual environment keeps your project dependencies isolated.
@@ -36,11 +35,65 @@ A virtual environment keeps your project dependencies isolated.
 ```bash
 # Create a virtual environment
 python -m venv venv
-
-# Activate it
-# Windows
+```
+**Activate it**  
+Windows:
+```
 venv\Scripts\activate
-# macOS / Linux
+```
+macOS / Linux
+```
 source venv/bin/activate
+```
+---
+### 3. Install Dependencies
+
+```
+pip install -r requirements.txt
+```
+This will include:  
+-imapclient  
+-pyzmail36  
+-python-dotenv  
+-mysql-connector-python  
+-streamlit  
+-pandas  
+
+### 4. Set up MySQL Server  
+Install MySQL (WorkBench+Server)  
+**Create DataBase**
+```
+CREATE DATABASE job_tracker;
+```
+**Create Applications Table**
+```
+CREATE TABLE applications (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    company VARCHAR(255),
+    role VARCHAR(255),
+    Application_Status VARCHAR(50),
+    email_date DATETIME,
+    email_uid VARCHAR(255) UNIQUE
+);
+```
+
+### 5. Create a .env file
+In the project root create a _.env_ file to store credentials  
+```
+EMAIL_USERNAME=your_email@gmail.com
+EMAIL_PASSWORD=your_app_password
+DB_PASSWORD=your_mysql_password
+```
+
+### 6. Fetch emails
+```
+python fetch_emails.py
+```
+
+### 7. Run the Dashboard
+```
+streamlit run dashboard.py
+```
+
 
 
