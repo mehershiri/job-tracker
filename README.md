@@ -59,6 +59,7 @@ This will include:
 -streamlit  
 -pandas  
 
+---
 ### 4. Set up MySQL Server  
 Install MySQL (WorkBench+Server)  
 **Create DataBase**
@@ -76,7 +77,7 @@ CREATE TABLE applications (
     email_uid VARCHAR(255) UNIQUE
 );
 ```
-
+---
 ### 5. Create a .env file
 In the project root create a _.env_ file to store credentials  
 ```
@@ -84,12 +85,12 @@ EMAIL_USERNAME=your_email@gmail.com
 EMAIL_PASSWORD=your_app_password
 DB_PASSWORD=your_mysql_password
 ```
-
+---
 ### 6. Fetch emails
 ```
 python fetch_emails.py
 ```
-
+---
 ### 7. Run the Dashboard
 ```
 streamlit run dashboard.py
